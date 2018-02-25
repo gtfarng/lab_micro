@@ -1,0 +1,62 @@
+;
+; program_34.asm
+;
+; Created: 2/25/2018 3:14:55 PM
+; Author : s5735512002
+;
+
+
+
+.INCLUDE "m328Pdef.inc"
+.DEF 	TEMP = R16
+.DEF	ZERO = R17
+.DEF	VAR_A = R19
+
+.CSEG
+.ORG 	0x0000
+	ldi 	TEMP, 0xFF
+	out 	DDRB, TEMP
+	ldi	TEMP, 0xFF
+	out	DDRD, TEMP
+	ldi 	TEMP, 0x00
+	out 	DDRC, TEMP
+	clr	ZERO
+	
+MAIN:	in	TEMP, PINC
+	andi 	TEMP, 0b01111000
+	lsr TEMP
+	lsr TEMP
+	lsr TEMP
+	
+	cpi TEMP,8
+	brsh MINUS
+	rjmp PLUS
+	
+MINUS:	ldi 	VAR_A,16
+	sub	VAR_A,TEMP
+	mov	TEMP,VAR_A
+	ldi	VAR_A,0x00
+	out	PORTD,VAR_A
+	rjmp	DISPLAY
+	
+PLUS:	ldi VAR_A,0x01
+	out PORTD,VAR_A
+	
+	
+DISPLAY:	
+	ldi 	ZL, low(TB7SEG*2)
+	ldi 	ZH, high(TB7SEG*2)
+	add 	ZL, TEMP
+	adc 	ZH, ZERO
+	lpm
+	com	R0
+	out	PORTB, R0
+	rjmp 	MAIN
+	
+TB7SEG:	.db 0b00111111, 0b00000110, 0b01011011, 0b01001111
+	.db 0b01100110, 0b01101101, 0b01111101, 0b00000111
+	.db 0b01111111, 0b01101111, 0b01110111, 0b01111100
+	.db 0b00111001, 0b01011110, 0b01111001, 0b01110001
+
+.DSEG
+.ESEG

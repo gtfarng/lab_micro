@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\s5735512002\Desktop\lab_pertius\program_33\program_33\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\s5735512002\Desktop\lab_pertius\program_33\program_33\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\s5735512002\Desktop\lab_pertius\program_33\program_33\Debug\program_33.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>program_33.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>program_33.map</FILE>
+  <FILE>program_33.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>C:\Users\s5735512002\Desktop\lab_pertius\program_33\program_33\main.asm</FILE><LINE>22</LINE></MAIN>
+  <TB7SEG><FILE>C:\Users\s5735512002\Desktop\lab_pertius\program_33\program_33\main.asm</FILE><LINE>33</LINE></TB7SEG>
+ </LABELS>
+</ASSEMBLER_INFO>
